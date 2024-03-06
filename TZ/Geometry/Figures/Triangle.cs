@@ -22,11 +22,11 @@ namespace Geometry.Figures
                 throw new Exception("Стороны треугольника не могут быть меньше либо равными нулю");
             }
 
-            if (firstSide + secondSide <= thirdSide ||
-                firstSide + thirdSide <= secondSide ||
+            if (firstSide + secondSide <= thirdSide &&
+                firstSide + thirdSide <= secondSide &&
                 secondSide + thirdSide <= firstSide)
             {
-                throw new Exception("Сумма двух любых сторон треугольника должна быть больше третьей стороны");
+                throw new Exception("Сумма двух сторон треугольника должна быть больше третьей стороны");
             }
 
             _firstSide = firstSide;
