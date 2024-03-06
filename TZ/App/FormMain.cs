@@ -121,9 +121,6 @@ namespace App
                 {
                     MessageBox.Show($"Треугольник со сторонами {firstSide}, {secondSide}, {thirdSide} не является прямоугольным");
                 }
-                
-
-
             }
             catch (Exception ex)
             {
