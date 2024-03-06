@@ -38,6 +38,7 @@
             this.btnTriangleForSquare = new System.Windows.Forms.Button();
             this.lblUnknownFigure = new System.Windows.Forms.Label();
             this.btnSquareForUnknownFigure = new System.Windows.Forms.Button();
+            this.btnTriangleRight = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCircle
@@ -112,7 +113,7 @@
             // 
             this.lblUnknownFigure.AutoSize = true;
             this.lblUnknownFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.lblUnknownFigure.Location = new System.Drawing.Point(12, 458);
+            this.lblUnknownFigure.Location = new System.Drawing.Point(12, 525);
             this.lblUnknownFigure.Name = "lblUnknownFigure";
             this.lblUnknownFigure.Size = new System.Drawing.Size(307, 132);
             this.lblUnknownFigure.TabIndex = 8;
@@ -120,7 +121,7 @@
             // 
             // btnSquareForUnknownFigure
             // 
-            this.btnSquareForUnknownFigure.Location = new System.Drawing.Point(12, 611);
+            this.btnSquareForUnknownFigure.Location = new System.Drawing.Point(20, 673);
             this.btnSquareForUnknownFigure.Name = "btnSquareForUnknownFigure";
             this.btnSquareForUnknownFigure.Size = new System.Drawing.Size(330, 54);
             this.btnSquareForUnknownFigure.TabIndex = 9;
@@ -128,11 +129,22 @@
             this.btnSquareForUnknownFigure.UseVisualStyleBackColor = true;
             this.btnSquareForUnknownFigure.Click += new System.EventHandler(this.BtnSquareForUnknownFigureOnClick);
             // 
+            // btnTriangleRight
+            // 
+            this.btnTriangleRight.Location = new System.Drawing.Point(20, 444);
+            this.btnTriangleRight.Name = "btnTriangleRight";
+            this.btnTriangleRight.Size = new System.Drawing.Size(330, 54);
+            this.btnTriangleRight.TabIndex = 10;
+            this.btnTriangleRight.Text = "Прямоугольный?";
+            this.btnTriangleRight.UseVisualStyleBackColor = true;
+            this.btnTriangleRight.Click += new System.EventHandler(this.BtnTriangleRightOnClick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 706);
+            this.ClientSize = new System.Drawing.Size(362, 739);
+            this.Controls.Add(this.btnTriangleRight);
             this.Controls.Add(this.btnSquareForUnknownFigure);
             this.Controls.Add(this.lblUnknownFigure);
             this.Controls.Add(this.btnTriangleForSquare);
@@ -163,6 +175,7 @@
         private System.Windows.Forms.Button btnTriangleForSquare;
         private System.Windows.Forms.Label lblUnknownFigure;
         private System.Windows.Forms.Button btnSquareForUnknownFigure;
+        private System.Windows.Forms.Button btnTriangleRight;
     }
 }
 

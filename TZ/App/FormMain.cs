@@ -94,5 +94,41 @@ namespace App
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void BtnTriangleRightOnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var firstSideParsed = double.TryParse(txtFirstTriangleSide.Text, out var firstSide);
+                var secondSideParsed = double.TryParse(txtSecondTriangleSide.Text, out var secondSide);
+                var thirdSideParsed = double.TryParse(txtThirdTriangleSide.Text, out var thirdSide);
+
+                if (!firstSideParsed ||
+                    !secondSideParsed ||
+                    !thirdSideParsed)
+                {
+                    throw new Exception("Одна или более сторон треугольника указаны некорректно");
+                }
+
+                var triangle = new Triangle(firstSide, secondSide, thirdSide);
+                var isRigth = triangle.IsTriangleRight();
+
+                if (isRigth)
+                {
+                    MessageBox.Show($"Треугольник со сторонами {firstSide}, {secondSide}, {thirdSide} является прямоугольным");
+                }
+                else
+                {
+                    MessageBox.Show($"Треугольник со сторонами {firstSide}, {secondSide}, {thirdSide} не является прямоугольным");
+                }
+                
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

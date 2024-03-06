@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Geometry.Figures
 {
@@ -45,6 +47,20 @@ namespace Geometry.Figures
                     (semiPerimeter - _firstSide) *
                     (semiPerimeter - _secondSide) *
                     (semiPerimeter - _thirdSide));
+        }
+
+        public bool IsTriangleRight()
+        {
+            var sidesList = new List<double>
+            {
+                _firstSide, 
+                _secondSide, 
+                _thirdSide 
+            };
+
+            sidesList.Sort();
+
+            return Math.Pow(sidesList[0], 2) + Math.Pow(sidesList[1], 2) == Math.Pow(sidesList[2], 2);
         }
     }
 }
