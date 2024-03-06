@@ -1,0 +1,12 @@
+Task 2
+SELECT 
+    p.Name AS ProductName, 
+    c.Name AS CategoryName
+FROM 
+    Products p
+LEFT JOIN 
+    ProductCategory pc ON p.ProductID = pc.ProductID
+LEFT JOIN 
+    Categories c ON pc.CategoryID = c.CategoryID
+ORDER BY 
+    ProductName, CategoryName;
