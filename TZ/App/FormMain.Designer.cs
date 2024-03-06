@@ -36,6 +36,8 @@
             this.txtSecondTriangleSide = new System.Windows.Forms.TextBox();
             this.txtThirdTriangleSide = new System.Windows.Forms.TextBox();
             this.btnTriangleForSquare = new System.Windows.Forms.Button();
+            this.lblUnknownFigure = new System.Windows.Forms.Label();
+            this.btnSquareForUnknownFigure = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCircle
@@ -106,11 +108,33 @@
             this.btnTriangleForSquare.UseVisualStyleBackColor = true;
             this.btnTriangleForSquare.Click += new System.EventHandler(this.BtnTriangleForSquareOnClick);
             // 
+            // lblUnknownFigure
+            // 
+            this.lblUnknownFigure.AutoSize = true;
+            this.lblUnknownFigure.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.lblUnknownFigure.Location = new System.Drawing.Point(12, 458);
+            this.lblUnknownFigure.Name = "lblUnknownFigure";
+            this.lblUnknownFigure.Size = new System.Drawing.Size(307, 132);
+            this.lblUnknownFigure.TabIndex = 8;
+            this.lblUnknownFigure.Text = "Не знаем какая \r\nфигура \r\nрассчитается";
+            // 
+            // btnSquareForUnknownFigure
+            // 
+            this.btnSquareForUnknownFigure.Location = new System.Drawing.Point(12, 611);
+            this.btnSquareForUnknownFigure.Name = "btnSquareForUnknownFigure";
+            this.btnSquareForUnknownFigure.Size = new System.Drawing.Size(330, 54);
+            this.btnSquareForUnknownFigure.TabIndex = 9;
+            this.btnSquareForUnknownFigure.Text = "Рассчитать площадь";
+            this.btnSquareForUnknownFigure.UseVisualStyleBackColor = true;
+            this.btnSquareForUnknownFigure.Click += new System.EventHandler(this.BtnSquareForUnknownFigureOnClick);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 450);
+            this.ClientSize = new System.Drawing.Size(362, 706);
+            this.Controls.Add(this.btnSquareForUnknownFigure);
+            this.Controls.Add(this.lblUnknownFigure);
             this.Controls.Add(this.btnTriangleForSquare);
             this.Controls.Add(this.txtThirdTriangleSide);
             this.Controls.Add(this.txtSecondTriangleSide);
@@ -137,6 +161,8 @@
         private System.Windows.Forms.TextBox txtSecondTriangleSide;
         private System.Windows.Forms.TextBox txtThirdTriangleSide;
         private System.Windows.Forms.Button btnTriangleForSquare;
+        private System.Windows.Forms.Label lblUnknownFigure;
+        private System.Windows.Forms.Button btnSquareForUnknownFigure;
     }
 }
 

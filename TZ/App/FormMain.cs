@@ -59,5 +59,40 @@ namespace App
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void BtnSquareForUnknownFigureOnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var needToCalculateCircleSquare = !string.IsNullOrWhiteSpace(txtCircleRadius.Text);
+                var needToCalculateTriangleSquare =
+                    !string.IsNullOrWhiteSpace(txtFirstTriangleSide.Text) &&
+                    !string.IsNullOrWhiteSpace(txtSecondTriangleSide.Text) &&
+                    !string.IsNullOrWhiteSpace(txtThirdTriangleSide.Text);
+
+                if (needToCalculateCircleSquare &&
+                    needToCalculateTriangleSquare ||
+                    !needToCalculateCircleSquare &&
+                    !needToCalculateTriangleSquare)
+                {
+                    throw new Exception("Определитесь с выбором фигуры");
+                }
+
+                if (needToCalculateCircleSquare)
+                {
+                    btnSquareForCircle.PerformClick();
+                    return;
+                }
+
+                if(needToCalculateTriangleSquare)
+                {
+                    btnTriangleForSquare.PerformClick();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
